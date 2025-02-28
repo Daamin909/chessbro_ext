@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "ChessBro",
+  "version": "1.0.0",
+  "description": "A chrome extension for https://chessbro.daamin.tech",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}
