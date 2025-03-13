@@ -1,7 +1,7 @@
 #input-area {
   filter: none;
   width: 100%;
-  height: 250px;
+  margin-bottom: 30px;
 }
 #game-input {
   display: flex;
@@ -52,7 +52,7 @@
   padding: 3px;
 }
 #game-input-box {
-  margin-top: 20px;
+  margin: 25px;
   background-color: transparent;
   color: black;
   display: flex;
@@ -60,6 +60,7 @@
   padding: 8px;
   width: 380px;
   border-radius: 10px;
+  margin-bottom: 0;
 }
 #game-input-button-container {
   display: flex;

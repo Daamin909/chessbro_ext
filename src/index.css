@@ -33,6 +33,6 @@ body {
   background-color: var(--background_color);
   color: var(--color);
   height: 500px;
-  width: 400px;
+  width: 450px;
   overflow: auto;
 }

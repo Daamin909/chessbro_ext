@@ -3,14 +3,17 @@ import "./InputArea.css";
 import { validatePGN } from "../../scripts/fetch";
 import { reviewPGN } from "../../scripts/gameReview";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import GameReview from "../GameReview/GameReview";
 const InputArea = () => {
   const [inputPGN, setInputPGN] = useState("");
+  const [reviewedGame, setReviewedGame] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (await validatePGN(inputPGN, displayError)) {
-      const reviewed_game = await reviewPGN(inputPGN, displayError);
-      console.log(reviewed_game);
+      const game = await reviewPGN(inputPGN, displayError);
+      setReviewedGame(game);
+      console.log(game);
     } else {
       displayError("PGN is Invalid. Try again.");
     }
@@ -62,6 +65,7 @@ const InputArea = () => {
           onClose={() => setErrorMessage(null)}
         />
       )}
+      {reviewedGame && <GameReview reviewedGame={reviewedGame} />}
     </>
   );
 };
