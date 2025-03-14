@@ -19,9 +19,6 @@ const InputArea = () => {
     }
     setInputPGN("");
   };
-  const handleClick = (e) => {
-    console.log(e);
-  };
   const displayError = (text) => {
     setErrorMessage(text);
   };
@@ -46,14 +43,14 @@ const InputArea = () => {
               <button type="submit" className="game-input-button">
                 <p id="img">🔍</p> Analyse
               </button>
-              <button
+              {/* <button
                 type="button"
                 id="fetch-btn"
                 className="game-input-button"
                 onClick={(e) => handleClick(e)}
               >
                 Fetch PGN from Page
-              </button>
+              </button> */}
             </div>
           </form>
         </div>
