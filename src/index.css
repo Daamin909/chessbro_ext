@@ -34,7 +34,7 @@ html {
 body {
   background-color: var(--background_color);
   color: var(--color);
-  height: 500px;
+  height: 300px;
   width: 450px;
   overflow: auto;
 }
